@@ -22,6 +22,10 @@ public class cubeScript : MonoBehaviour
     {
       force += Vector3.left * speed;
     }
+    if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+    {
+      force += Vector3.up * speed * 2f;
+    }
     rb.AddForce(force);
   }
 }
